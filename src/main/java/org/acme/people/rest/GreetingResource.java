@@ -22,7 +22,7 @@ public class GreetingResource {
     @Path("{name}")
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String personalisedHello(String name, int age) {
+    public String personalisedHello(String name) {
         return "Hello " + name;
     }
 }
