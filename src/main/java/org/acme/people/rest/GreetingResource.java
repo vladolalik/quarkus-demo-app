@@ -19,9 +19,10 @@ public class GreetingResource {
         return "hello";
     }
 
-    @Path("{name}/{age:\\d+}")
+    @Path("/{name}")
     @GET
-    public String helloWithAge(String name, int age) {
-        return "Hello " + name + " is your age really " + age + "?";
+    @Produces(MediaType.TEXT_PLAIN)
+    public String personalisedHello(String name, int age) {
+        return "Hello " + name;
     }
 }
