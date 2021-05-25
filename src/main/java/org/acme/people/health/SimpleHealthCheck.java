@@ -23,7 +23,7 @@ public class DatabaseConnectionHealthCheck implements HealthCheck {
         try {
             simulateDatabaseConnectionVerification();
             responseBuilder
-                .withData('test', 'VladoL')
+                .withData("test", "VladoL")
                 .up();
         } catch (IllegalStateException e) {
             // cannot access the database
