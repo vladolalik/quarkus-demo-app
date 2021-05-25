@@ -19,7 +19,7 @@ public class GreetingResource {
         return "hello";
     }
 
-    @Path("/{name}")
+    @Path("{name}")
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String personalisedHello(String name, int age) {
