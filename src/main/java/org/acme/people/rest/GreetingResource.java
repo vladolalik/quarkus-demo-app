@@ -18,4 +18,11 @@ public class GreetingResource {
     public String hello() {
         return "hello";
     }
+
+    @Path("{name}/{age:\\d+}")
+    @GET
+    @Produces(MediaType.TEXT_JSON)
+    public String helloWithAge() {
+        return "Hello " + name + " is your age really " + age + "?";
+    }
 }
