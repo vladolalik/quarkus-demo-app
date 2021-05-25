@@ -21,7 +21,7 @@ public class GreetingResource {
 
     @Path("{name}/{age:\\d+}")
     @GET
-    @Produces(MediaType.TEXT_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
     public String helloWithAge() {
         return "Hello " + name + " is your age really " + age + "?";
     }
